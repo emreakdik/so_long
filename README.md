@@ -18,4 +18,4 @@ make bonus
 ./so_long_bonus "maps/map3_bonus.ber"
 ```
 
-![](https://gifyu.com/image/S47Ur)
+[![S47Ur.gif](https://s11.gifyu.com/images/S47Ur.gif)](https://gifyu.com/image/S47Ur)

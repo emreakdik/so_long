@@ -6,7 +6,7 @@
 /*   By: yakdik <yakdik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:50:18 by yakdik            #+#    #+#             */
-/*   Updated: 2023/04/19 13:00:29 by yakdik           ###   ########.fr       */
+/*   Updated: 2023/09/17 13:49:49 by yakdik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,5 @@ int	main(int ac, char **av)
 	mlx_hook(main->win, 17, 0, ft_x_button, main);
 	mlx_loop(main->mlx);
 }
+
+// ./so_long_bonus "maps/map3_bonus.ber"

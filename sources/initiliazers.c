@@ -6,7 +6,7 @@
 /*   By: yakdik <yakdik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:50:23 by yakdik            #+#    #+#             */
-/*   Updated: 2023/04/13 15:50:24 by yakdik           ###   ########.fr       */
+/*   Updated: 2023/09/17 14:10:38 by yakdik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,5 @@ void	main_initiliazer(char *path, t_main **main)
 	(*main)->mlx = mlx_init();
 	(*main)->map->map = map_initiliazer(path, *main);
 	(*main)->win = mlx_new_window((*main)->mlx, ((*main)->map->x - 1) * PIXEL,
-			(*main)->map->y * PIXEL, title);
+			(*main)->map->y * PIXEL, "so");
 }

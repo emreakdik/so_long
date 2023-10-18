@@ -6,7 +6,7 @@
 #    By: yakdik <yakdik@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 15:51:05 by yakdik            #+#    #+#              #
-#    Updated: 2023/04/19 13:13:24 by yakdik           ###   ########.fr        #
+#    Updated: 2023/10/18 21:53:55 by yakdik           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ BONUSNAME	= so_long_bonus
 GREEN='\033[0;32'
 NC='\033[0m'
 
-# For MacOS
 MINILIBX	= library/minilibx_opengl/
 
 
@@ -27,17 +26,38 @@ CFLAGS		= -Wall -Werror -Wextra
 RM			= rm -f
 ECHO		= echo
 
-# For MacOS
 OPENGL		= -framework OpenGL -framework AppKit
 
-# For MacOS
 MINILIBXCC	= -I mlx -L $(MINILIBX) -lmlx
 
 
 COMPILEPRM	= $(MINILIBXCC) $(OPENGL) -o $(NAME) libft.a $(MINILIBX)/libmlx.a
 COMPILEPRMB	= $(MINILIBXCC) $(OPENGL) -o $(BONUSNAME) libft.a $(MINILIBX)/libmlx.a
-MANDATORYFILES	= $(shell find sources -name "*.c" ! -name "bonus_so_long.c")
-BONUSFILES		= $(shell find sources -name "*.c" ! -name "so_long.c")
+MANDATORYFILES = sources/mandatory/checks.c \
+ 				sources/mandatory/draw.c \
+ 				sources/mandatory/initiliazers.c \
+ 				sources/mandatory/move.c \
+ 				sources/mandatory/path_finding.c \
+ 				sources/mandatory/render.c \
+ 				sources/mandatory/so_long.c \
+ 				sources/mandatory/utilities_error.c \
+ 				sources/mandatory/utilities_extra.c \
+ 				sources/mandatory/utilities_game.c \
+ 				sources/mandatory/utilities_map.c
+
+BONUSFILES = 	 sources/bonus/bonus_checks.c \
+				sources/bonus/bonus_draw.c \
+				sources/bonus/bonus_move.c \
+				sources/bonus/bonus_path_finding.c \
+				sources/bonus/bonus_render.c \
+				sources/bonus/bonus_so_long.c \
+				sources/bonus/bonus_utilities_error.c \
+				sources/bonus/bonus_utilities_extra.c \
+				sources/bonus/bonus_utilities_game.c \
+				sources/bonus/bonus_utilities_map.c \
+				sources/bonus/bonus_initiliazers.c \
+				sources/bonus/bonus_utilities.c
+			
 MANDATORYOBJ	=	$(MANDATORYFILES:.c=.o)
 BONUSOBJ		=	$(BONUSFILES:.c=.o)
 start:

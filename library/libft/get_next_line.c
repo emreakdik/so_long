@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yakdik <yakdik@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: yakdik <yakdik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:28:04 by yakdik            #+#    #+#             */
-/*   Updated: 2023/01/20 19:49:01 by yakdik           ###   ########.fr       */
+/*   Updated: 2023/10/18 18:25:01 by yakdik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	*get_line(char *stack)
 		return (NULL);
 	i = 0;
 	after_newline = newline_counter(stack);
-	ret = malloc(sizeof(char) * (after_newline + 2));
+	ret = (char *)malloc(sizeof(char) * (after_newline + 2));
 	if (!ret)
 		return (NULL);
 	while (stack[i] != '\0' && stack[i] != '\n')
